@@ -27,6 +27,9 @@ function ApodDate() {
   return (
     <div>ApodDate
         <img src={apod.hdurl} alt="..." />
+        <h3 className="text-3xl">{apod.title}</h3>
+        <p>{apod.explanation} </p>
+        <p>📅 : {apod.date}</p>
     </div>
   )
 }

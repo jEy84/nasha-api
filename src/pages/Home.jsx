@@ -4,9 +4,9 @@ import Apod from '../components/Apod';
 
 function Home() {
   return (
-    <div>
+    <div className=''>
         <h3>Daily astronent image</h3>
-        <Apod/>
+        <Apod className='bg-black '/>
     </div>
   )
 }
