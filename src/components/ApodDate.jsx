@@ -24,6 +24,7 @@ function ApodDate() {
       useEffect(()=>{
         getData(params.date);
       },[params.date])
+      
   return (
     <div>ApodDate
         <img src={apod.hdurl} alt="..." />

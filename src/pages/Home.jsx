@@ -5,7 +5,7 @@ import Apod from '../components/Apod';
 function Home() {
   return (
     <div className=''>
-        <h3>Daily astronent image</h3>
+        <h3>Daily Astronaut Image</h3>
         <Apod className='bg-black '/>
     </div>
   )

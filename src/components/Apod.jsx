@@ -49,8 +49,6 @@ function Apod() {
               (e)=>{
                 setDate(e.target.value);
               }} type="date" name="date" id="date" value={date} />
-              {console.log(date)}
-
               <button className="bg-slate-400 p-2 rounded-md ml-3" type="submit">getDetails</button>
         </form>
       </div>
