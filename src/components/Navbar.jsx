@@ -1,9 +1,19 @@
 import React from "react";
 import logo from "../assets/s75-31690.jpeg";
 import { FiSearch } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function Navbar() {
+
+  const [query,setQuery] = useState(); 
+  const navigate = useNavigate();
+
+ const submitHandler = (e)=>{
+  e.preventDefault();
+    navigate('/searched/'+query);
+ }
+
   return (
     <nav className="flex items-center justify-between w-screen bg-sky-100 p-2 ">
       <img
@@ -24,12 +34,21 @@ function Navbar() {
       </div>
       {/* search input */}
       <div className="basis-11/12 flex space-x-2">
-        <input
+        <form onSubmit={submitHandler}>
+          <input onChange={(e)=>{
+            setQuery(e.target.value);
+          }}
           type="text"
           placeholder=" rover landing.."
           className="h-8 w-9/12 rounded-lg"
-        />
-        <FiSearch className="h-8 hover:bg-indigo-300 rounded-2xl w-5 "/>
+          value={query}
+          />
+           <button className="bg-green-800 rounded-xl" type="submit">
+        {/* <FiSearch className="h-8 hover:bg-indigo-300 rounded-2xl w-5 "/> */}
+        search
+
+        </button>
+        </form>
       </div>
     </nav>
   );

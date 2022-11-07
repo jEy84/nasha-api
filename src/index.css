@@ -9,4 +9,7 @@ body {
   /* place-items: center; */
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
+
+  /* background-image: url("./assets/nasa-CpHNKNRwXps-unsplash.jpg"); */
+  background-repeat: repeat-y;
 }
