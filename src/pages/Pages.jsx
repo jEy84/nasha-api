@@ -5,7 +5,7 @@ import Earth from './Earth';
 import Home from './Home';
 import  Search from '../components/Search';
 import ApodDate from '../components/ApodDate';
-import MarsShow from './MarsShow';
+import MarsShow from '../components/MarsShow';
 
 function Pages() {
   return (
@@ -18,7 +18,7 @@ function Pages() {
         <Route path="/s/:date" element={<ApodDate/>}/>
 
         {/* for mars show */}
-        <Route path='/mars/:camname' element={<MarsShow/>}/>
+        <Route path='/mars/:rovername' element={<MarsShow/>}/>
     </Routes>
   )
 }

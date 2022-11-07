@@ -9,4 +9,6 @@
 
 
 it's v.1  
-error handling  remaining 
+//for me
+error handling  remaining // and some component creation
+//change some useState to useRef

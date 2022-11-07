@@ -28,7 +28,6 @@ const navigate = useNavigate();
         <p>📅 : {data?.date}</p>
       </div>
 
-
     
       <div className="mx-3 space-x-4">
         <form onSubmit={submitHandler}>

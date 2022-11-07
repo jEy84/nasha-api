@@ -43,7 +43,7 @@ function Navbar() {
           className="h-8 w-9/12 rounded-lg"
           value={query}
           />
-           <button className="bg-green-800 rounded-xl" type="submit">
+           <button className="bg-blue-500 ml-3 p-1 rounded-lg" type="submit">
         {/* <FiSearch className="h-8 hover:bg-indigo-300 rounded-2xl w-5 "/> */}
         search
 
