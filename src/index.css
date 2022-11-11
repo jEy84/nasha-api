@@ -5,11 +5,13 @@
 
 body {
   margin: 0;
-  display: flex;
   /* place-items: center; */
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
 
-  /* background-image: url("./assets/nasa-CpHNKNRwXps-unsplash.jpg"); */
-  background-repeat: repeat-y;
+  background:rgb(4, 4, 4);  
+  background-repeat: no-repeat;
+}
+input,select,textarea{
+  color: black;
 }

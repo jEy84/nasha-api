@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import useFetch from '../components/useFetch' //custom function to fetch data
 
+import useFetch from '../components/useFetch' //custom function to fetch data
 
 function Earth() {
   const { data, loading, error } = useFetch(` https://api.nasa.gov/EPIC/api/natural?api_key=${import.meta.env.VITE_API_KEY}`);
 
-  if (loading) return <h1>Loading ..........</h1>;
+  if (loading) return null;
 
   if (error) console.log(error);
   return (
-    <div className='container bg-orange-100'>
+    <div className='container '>
 
 
       <div className="grid grid-rows-4 grid-flow-col gap-3 ">

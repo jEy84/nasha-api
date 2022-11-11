@@ -8,7 +8,12 @@ module.exports = {
     fontFamily:{
      
     },
-    extend: {},
+    extend: {
+      height:{
+        '13':'50px',
+      }
+    },
+
   },
   plugins: [],
 }

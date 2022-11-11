@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useRef } from "react";
+import React, {useState } from "react";
 import { useParams } from "react-router-dom";
-import useFetch from "./useFetch";
 import MarsImageShow from "./MarsImageShow";
 
 //modificaion needed
 function MarsShow(){
     let params = useParams();
-    let formFill = false;
 
     const [sol,setSol] = useState(null);
     const  submitHandler = (e)=>{
@@ -21,7 +18,7 @@ function MarsShow(){
  <div>
   <form onSubmit={submitHandler}>
 
-  Enter the Sol Day: <input onChange={
+  Enter the Sol Day: <input  onChange={
     (e)=>{
       setSol(e.target.value);
 

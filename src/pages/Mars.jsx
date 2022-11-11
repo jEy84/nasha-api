@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
+import React, { } from 'react'
 import './Mars.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Mars() {
-  const navigate = useNavigate();
-  const [cname, setCname] = useState([]);
-
-
 
   return (
 
@@ -15,7 +11,7 @@ function Mars() {
     //some camera full name remain
     <div className='m-5'>
 
-      <table className='table-auto w-full mt-4  bg-gray-200 opacity-75 rounded-2xl'>
+      <table className='text-black table-auto w-full mt-4  bg-gray-200  rounded-2xl'>
         <tr>
           <th>Abbreviation</th>
           <th>Camera</th>

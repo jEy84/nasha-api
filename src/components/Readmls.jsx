@@ -12,9 +12,13 @@ const Readmls =({limit,children})=>{
 
     return (
         <div className="read-more-less">
-            { isReadMore? children:children.substr(0,limit)}
-            <button onClick={toggleBtn} className="text-purple-600">{isReadMore ? " Read Less":"...Read More"}</button>
-        </div>
+            { isReadMore? children:children.substr(0,limit)
+                }    
+            {children.length >limit ?  <button onClick={toggleBtn} className="text-purple-600">
+
+            {isReadMore ? " Read Less":"...Read More"}
+            </button>:null}
+          </div> 
     )
 }
 
