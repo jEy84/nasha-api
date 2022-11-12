@@ -68,7 +68,7 @@ function Navbar() {
                         </NavLink>
                       ))}
                     {/* search input */}
-                    <form onSubmit={submitHandler}>
+                    <form onSubmit={submitHandler} className="flex">
                       <input onChange={(e) => {
                         setQuery(e.target.value);
                       }}
