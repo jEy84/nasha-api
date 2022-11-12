@@ -28,7 +28,7 @@ function MarsShow(){
   </form>
  </div>
 
-<div className="grid gap-4 grid-cols-3 m-4 ml-9">
+<div className="grid grid-cols-1 md:gap-2 md:grid-cols-2 lg:gap-4 lg:grid-cols-3 m-4 ml-9">
  { (sol &&params.rovername)?<MarsImageShow  solValue={sol} roverName={params.rovername} />:<h2>Enter Sol value to see image</h2>}
 </div>
   </>

@@ -27,7 +27,7 @@ function Navbar() {
     navigate('/searched/' + query);
   }
 
-  return (
+  return (<>
     <Disclosure as="nav" className="sticky">
       {({ open }) => (
         <>
@@ -36,7 +36,7 @@ function Navbar() {
 
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* <!-- Mobile menu button--> */}
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-700 hover:text-mauve focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -59,8 +59,8 @@ function Navbar() {
                           key={item.name}
                           to={item.to}
                           className={classNames(
-                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                            'px-3 py-2 rounded-md text-md font-normal'
+                            item.current ? 'bg-gray-900 text-white font-medium tracking-wide' : 'text-gray-300  hover:bg-hovery hover:text-hoeverin font-medium tracking-wide',
+                            'px-3 py-2 rounded-md text-md'
                           )}
                           aria-current={item.current ? 'page' : undefined}
                         >
@@ -74,13 +74,11 @@ function Navbar() {
                       }}
                         type="text"
                         placeholder=" rover landing.."
-                        className="h-8 ml-1 w-9/12 rounded-lg"
+                        className="h-8 ml-1 w-9/12 rounded-lg p-2 "
                         value={query}
                       />
-                      <button className="bg-blue-500 ml-3 p-1 rounded-lg" type="submit">
-                        {/* <FiSearch className="h-8 hover:bg-indigo-300 rounded-2xl w-5 "/> */}
-                        search
-
+                      <button className="ml-3 p-1 rounded-md bg-btnnss hover:text-russianviolet" type= "submit">
+                           search
                       </button>
                     </form>
                     </div>
@@ -108,11 +106,29 @@ function Navbar() {
                       {item.name}
                     </NavLink>
                   ))}
+                  <div className="">
+                  <form onSubmit={submitHandler}>
+                      <input onChange={(e) => {
+                        setQuery(e.target.value);
+                      }}
+                        type="text"
+                        placeholder=" rover landing.."
+                        className="h-8 ml-1 w-1/2 rounded-lg"
+                        value={query}
+                      />
+                      <button className="bg-blue-500 ml-3 p-1 rounded-lg" type="submit">
+                        {/* <FiSearch className="h-8 hover:bg-indigo-300 rounded-2xl w-5 "/> */}
+                        search
+
+                      </button>
+                    </form>
+                  </div>
                 </div>
               </Disclosure.Panel>
               </>
       )}
     </Disclosure>
+    </>
   )}
 
             export default Navbar;

@@ -6,7 +6,7 @@ import Home from './Home';
 import  Search from '../components/Search';
 import ApodDate from '../components/ApodDate';
 import MarsShow from '../components/MarsShow';
-import About from '../components/About';
+import About from '../pages/About';
 
 function Pages() {
   return (
