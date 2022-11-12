@@ -4,7 +4,7 @@ import useFetch from "./useFetch";
 function MarsImageShow({solValue,roverName}){
 
     
-    const { data, loading, error } = useFetch(`http://mars-photos.herokuapp.com/api/v1/rovers/${roverName}/photos?sol=${solValue}`);
+    const { data, loading, error } = useFetch(`https://mars-photos.herokuapp.com/api/v1/rovers/${roverName}/photos?sol=${solValue}`);
   
     if (loading) return <h1>Loading ..........</h1>;
   
