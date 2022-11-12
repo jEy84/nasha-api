@@ -11,7 +11,7 @@ function Home() {
 
     </div>
 
-    <Apod />
+    <Apod  />
 
   </>
   )
