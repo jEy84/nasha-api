@@ -129,20 +129,20 @@ function Mars() {
     <div className=' mt-3 flex flex-row items-center'>
 
       <Link className='rounded-lg p-1 hover:bg-slate-500' to="/mars/curiosity">
-        <img className='w-10/12' src={curo} alt="...." srcset="" />
+        {/* <img className='w-10/12' src={curo} alt="...." srcset="" /> */}
         <p className='text-center'> Curiosity </p>
       </Link>
       <Link className='rounded-lg p-1 hover:bg-slate-500' to="/mars/spirit">
-        <img className='w-10/12' src={spir} alt="...." />
+        {/* <img className='w-10/12' src={spir} alt="...." /> */}
         <p className='text-center'>Spirit</p>
       </Link>
       <Link className='rounded-lg p-1 hover:bg-slate-500' to="/mars/opportunity">
-        <img className='w-10/12' src={oppor} alt="...." srcset="" />
+        {/* <img className='w-10/12' src={oppor} alt="...." srcset="" /> */}
         <p className='text-center'> Opportunity </p>
 
       </Link>
       <Link className='rounded-lg p-1 hover:bg-slate-500' to="/mars/perseverance">
-        <img className='w-10/12' src={perv} alt="...." srcset="" />
+        {/* <img className='w-10/12' src={perv} alt="...." srcset="" /> */}
         <p className='text-center'> Perseverance </p>
       </Link>
     </div>

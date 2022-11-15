@@ -43,7 +43,7 @@ function Earth() {
 
         {/* for making img url */}
         {data?.map(ith => {
-          console.log(ith);
+          
           var imgeName = ith.image + ".png";
           var archive = `https://epic.gsfc.nasa.gov/archive/natural/${ith.date.slice(0, 4)}/${ith.date.slice(5, 7)}/${ith.date.slice(8, 10)}/png/`;
 
