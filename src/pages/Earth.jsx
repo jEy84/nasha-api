@@ -1,6 +1,6 @@
 import React from 'react'
 import useFetch from '../components/useFetch' //custom function to fetch data
-
+import loading from '../assets/loading.svg'
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -14,7 +14,7 @@ import '../components/layouts/imageslider';
 function Earth() {
   const { data, loading, error } = useFetch(` https://api.nasa.gov/EPIC/api/natural?api_key=${import.meta.env.VITE_API_KEY}`);
 
-  if (loading) return null;
+  if (loading) return <img src={loading} alt="...."  />;
 
   if (error) console.log(error);
 
@@ -37,13 +37,13 @@ function Earth() {
           clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay, Pagination,Navigation]}
         className="mySwiper w-full my-4 lg:w-1/2 "
       >
 
         {/* for making img url */}
         {data?.map(ith => {
-          
+
           var imgeName = ith.image + ".png";
           var archive = `https://epic.gsfc.nasa.gov/archive/natural/${ith.date.slice(0, 4)}/${ith.date.slice(5, 7)}/${ith.date.slice(8, 10)}/png/`;
 
