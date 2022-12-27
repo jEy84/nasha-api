@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom';
 import useFetch from "./useFetch";
-import load from '../assets/loading.svg'
+import Load from './layouts/Loading'; 
 import ApodLyout from "./layouts/ApodLyout";
 
 function Apod() {
@@ -17,19 +17,19 @@ function Apod() {
   const {data,loading,error} = useFetch(`https://api.nasa.gov/planetary/apod?api_key=${
     import.meta.env.VITE_API_KEY}`);
 
-  if(loading) return <img src={load} alt="...Loading" />;
+  if(loading) return ;
 
   if(error) console.log(error);
   return (
     <>
-     <div className='flex flex-col items-center p-1 my-1'>
+     <div className='flex flex-col items-center p-1 my-1 mx-1'>
 
     {/* show card */}
-      <ApodLyout hdurl={data?.hdurl} title={data?.title} desc={data?.explanation} date={data?.date}  />
+      {loading? <Load/>:<ApodLyout hdurl={data?.hdurl} title={data?.title} desc={data?.explanation} date={data?.date}  /> }  
     </div>
     
     {/* to get specific date  image*/}
-        <div className="flex flex-col ml-6 mt-8 items-center mb-8">
+        <div className="flex flex-col items-center my-7 mx-7">
           <p className="text-xl mb-2">To Get the specific picture of the Day select the Date here ...👇 </p>
           <form onSubmit={submitHandler} className="space-x-5 bg-heliotrope rounded-md p-2">
             Day : <input  onChange={

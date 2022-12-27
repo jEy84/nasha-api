@@ -27,7 +27,8 @@ module.exports = {
        'hoeverin':"#EBC2FF",
        'btnnss':"#8b79d9",
        'palepurple':"#F8EBFF",
-       'bluetype':"#662ab9"
+       'bluetype':"#662ab9",
+       'ptext': "#F8EBFF"
     },
 
   },

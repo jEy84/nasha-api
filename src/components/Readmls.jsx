@@ -14,7 +14,8 @@ const Readmls =({limit,children})=>{
         <div className="read-more-less">
             { isReadMore? children:children.substr(0,limit)
                 }    
-            {children.length >limit ?  <button onClick={toggleBtn} className="text-purple-600">
+                {/* add custom color red just temp */}
+            {children.length >limit ?  <button onClick={toggleBtn} className="" style={{color:"red"}}>
 
             {isReadMore ? " Read Less":"...Read More"}
             </button>:null}

@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import useFetch from './useFetch';
 import Readmls from './Readmls';
-import load from '../assets/loading.svg' 
+import Load from '../components/layouts/Loading'; 
 
 function Search() {
   let params = useParams();
@@ -11,7 +11,7 @@ function Search() {
   let queryR = params.query;
   const { data, loading, error } = useFetch(`https://images-api.nasa.gov/search?q=${queryR}`);
 
-  if (loading) return <img src={load} className="w-max" alt="...." srcset="" />
+  
   if (error) console.log(error);
   // 
 
@@ -19,7 +19,7 @@ function Search() {
     <>
      
      <div className='grid gap-4 grid-cols-1 md:grid-cols-3 grid-rows-3 m-4 ml-9'>
-      {data?.collection.items.map(ith => {
+      {loading?<Load/>: data?.collection.items.map(ith => {
 
         console.log(ith);
         return (
